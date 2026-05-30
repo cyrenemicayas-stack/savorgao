@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>Local Cooks & Vendors in Siargao</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    h1, h2 {
+      font-family: 'Pacifico', cursive;
+    }
+
+    h1 {
+      color: #ffe066;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+
+    .section-card {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 1rem;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      color: #212529;
+    }
+
+    .section-card h2 {
+      color: #e85d04;
+    }
+
+    .section-card p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    .section-card img {
+      border-radius: 0.75rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 1rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 1rem;
+      padding: 2rem;
+    }
+    .custom-pagination .page-link {
+    color: #111;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    margin: 0 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .custom-pagination .page-link:hover {
+    background-color: #ffe082;
+    color: #000;
+    border-color: #ffc107;
+  }
+
+  .custom-pagination .active .page-link {
+    background-color: #ffb300;
+    border-color: #ffb300;
+    color: #fff;
+  }
+
+  .custom-pagination .page-item.disabled .page-link {
+    color: #999;
+    pointer-events: none;
+    background-color: #eee;
+    border-color: #ddd;
+  }
+
+
+  </style>
+</head>
+<body>
+    
+    <nav class="navbar shadow-lg" style="background-color: #f4c095;">
+        <div class="container-fluid justify-content-center">
+            <img src="savorgaologo.png" alt="Savorgao Logo" style="height: 50px; margin-right: 10px;">
+          <span class="navbar-brand mb-0 h1 fs-1" style="font-family: 'Pacifico', cursive; color: #5c3317;">
+            Savorgao
+          </span>
+        </div>
+      </nav>
+
+  <div class="container my-5">
+    <h1 class="text-center mb-5">Local Cooks & Vendors in Siargao</h1>
+
+    <div class="section-card row align-items-center">
+      <div class="col-md-6 mb-3 mb-md-0">
+        <img src="chefmarky.jpg" alt="Chef Andrew Malarky" class="img-fluid">
+      </div>
+      <div class="col-md-6">
+        <h2>Chef Andrew Malarky – Wild Restaurant</h2>
+        <p><strong>Chef Andrew Malarky</strong>, originally from Canada, co-founded <strong>Wild Restaurant</strong> in General Luna. His culinary journey spans over 18 years, with experiences in renowned establishments across North America. During the pandemic, Wild Restaurant initiated a "Kitchen Takeover" program, providing a platform for local chefs to showcase their talents. This initiative not only supported the community but also enriched Siargao's diverse food scene.</p>
+      </div>
+    </div>
+
+    <div class="section-card row align-items-center flex-md-row-reverse">
+      <div class="col-md-6 mb-3 mb-md-0">
+        <img src="kaimana.jpg" alt="Roots Restaurant" class="img-fluid">
+      </div>
+      <div class="col-md-6">
+        <h2>Roots Restaurant – A Fusion of Cultures</h2>
+        <p><strong>Roots</strong>, located within Kaimana Resort, is a collaborative effort by chefs from Spain, Italy, Mexico, and Portugal. They blend their rich culinary traditions with local Filipino ingredients, creating a unique dining experience. The restaurant emphasizes sustainability, sourcing produce from local farmers and incorporating eco-friendly practices in its operations.</p>
+      </div>
+    </div>
+
+    <div class="section-card row align-items-center">
+      <div class="col-md-6 mb-3 mb-md-0">
+        <img src="mamasgrill.webp" alt="Mama's Grill" class="img-fluid">
+      </div>
+      <div class="col-md-6">
+        <h2>Mama's Grill – A Taste of Home</h2>
+        <p><strong>Mama’s Grill</strong> is a beloved carinderia (local eatery) in Siargao, known for its grilled meats and home-cooked meals. It's a favorite spot for both locals and tourists seeking authentic Filipino flavors in a casual setting.</p>
+      </div>
+    </div>
+
+    <div class="section-card text-center">
+      <h2 class="mb-3">🎥 Meet the Chefs Making World-Class Food in Siargao</h2>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/TAaIR7aapJg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid mt-5">
+    <div class="row justify-content-center">
+      <div class="col-auto text-center">
+        <div style="
+          font-family: 'Pacifico', cursive;
+          font-size: 2.5rem;
+          font-weight: 700;
+          letter-spacing: 2px;
+          text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        ">
+          <span style="color: #ffe082;">S</span>
+          <span style="color: #ffcc80;">A</span>
+          <span style="color: #ffb74d;">V</span>
+          <span style="color: #ffca28;">O</span>
+          <span style="color: #ffb300;">O</span>
+          <span style="color: #ff8f00;">R</span>
+          <span style="color: #ffa726;">G</span>
+          <span style="color: #ffcc80;">A</span>
+          <span style="color: #ffe082;">O</span>
+        </div>
+      </div>
+    </div>
+  
+    <nav aria-label="Recipe page navigation" class="d-flex justify-content-center mt-4">
+      <ul class="pagination pagination-lg custom-pagination">
+  
+        <li class="page-item">
+          <a class="page-link" href="page2.html" aria-label="Previous">
+            ‹ Prev
+          </a>
+        </li>
+  
+        <li class="page-item" id="page1"><a class="page-link" href="recipes.html">1</a></li>
+        <li class="page-item" id="page2"><a class="page-link" href="page2.html">2</a></li>
+        <li class="page-item" id="page3"><a class="page-link" href="page3.html">3</a></li>
+        <li class="page-item" id="page4"><a class="page-link" href="page4.html">4</a></li>
+  
+        <li class="page-item">
+          <a class="page-link" href="page4.html" aria-label="Next">
+            Next ›
+          </a>
+        </li>
+  
+      </ul>
+    </nav>
+  </div>
+
+  <script>
+    
+    const pageItems = document.querySelectorAll('.page-item');
+  
+    pageItems.forEach(item => {
+      item.addEventListener('click', function() {
+        
+        pageItems.forEach(page => page.classList.remove('active'));
+        
+        item.classList.add('active');
+      });
+    });
+    document.getElementById("page3").classList.add("active");
+  </script>
+    
+    
+      
+<footer style="background-color: #f4c095;" class="text-dark text-center py-3 mt-5">
+    <div class="foot">
+      <p class="mb-0">© 2025 Flavors of Siargao | Taste the Island with CJ</p>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,523 @@
+<!DOCTYPE html>     
+<html>
+<head>
+  <title>Dessert Recipes - Savorgao</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+     body {
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .card{
+      background-color: beige;
+    }
+    .card:hover {
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      transition: 0.3s ease;
+    }
+    .custom-navbar {
+      background-color: #f4c095;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    .navbar .navbar-brand {
+      font-family: 'Pacifico', cursive;
+      font-size: 2rem;
+      color: #3e2723 !important;
+    }
+
+    .navbar .nav-link {
+      color: #5d4037 !important;
+      font-weight: 600;
+    }
+
+      .navbar .nav-link:hover {
+        color: #e65100 !important;
+      }
+    h2 {
+      color: white; 
+      font-size: 2.5rem; 
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+    }
+    .btn-outline-secondary {
+      border-color: white; 
+      color: white; 
+    }
+    .btn-outline-secondary:hover {
+      background-color: white; 
+      color: #8B0000; 
+    }
+    .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .btn-view-recipe {
+    align-self: center; 
+    background-color: #FF6F61; 
+    color: white; 
+    border: 2px solid #FF6F61; 
+    border-radius: 50px; 
+    padding: 12px 30px; 
+    font-weight: 600; 
+    transition: background-color 0.3s, transform 0.3s; 
+  }
+
+  .btn-view-recipe:hover {
+    background-color: #ff3d2f; 
+    transform: scale(1.1); 
+    border-color: #ff3d2f; 
+  }
+
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="savorgaologo.png" alt="Savorgao Logo" style="height: 50px; width: 50px; border-radius: 50%; margin-right: 10px;">
+        Savorgao
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="recipes.html">Recipes</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="container mt-4 text-center">
+  <h2 class="mb-4">Dessert Recipes</h2>
+  <a href="recipes.html" class="btn btn-outline-secondary mb-4">← Back to Recipes</a>
+</div>
+
+
+<div class="container mb-4">
+  <input type="text" id="searchInput" class="form-control" placeholder="Search food...">
+</div>
+
+<div class="container">
+    <div class="row g-4" id="recipeList">
+        
+        <div class="col-md-6 col-lg-4 recipe-card">
+            <div class="card h-100">
+                <img src="halohalo.jpg" class="card-img-top" alt="Halo-Halo">
+                <div class="card-body">
+                    <h5 class="card-title">Halo-Halo</h5>
+                    <p class="card-text">A refreshing mix of shaved ice, sweetened beans, fruits, leche flan, ube halaya, and evaporated milk. Perfect for cooling down after a beach day.</p>
+                    <button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#haloHaloModal">
+                        View Recipe
+                    </button>
+                </div>
+            </div>
+        </div>
+     
+        <div class="modal fade" id="haloHaloModal" tabindex="-1" aria-labelledby="haloHaloModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="haloHaloModalLabel">Halo-Halo Recipe</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img src="halohalo.jpg" class="img-fluid mb-3 mx-auto d-block" alt="Halo-Halo">
+                        <h3>Ingredients:</h3>
+                        <ul>
+                            <li>Shaved ice</li>
+                            <li>Sweetened beans (red beans, kidney beans, garbanzos)</li>
+                            <li>Sweetened fruits (banana, jackfruit, etc.)</li>
+                            <li>Leche flan</li>
+                            <li>Ube halaya (purple yam jam)</li>
+                            <li>Evaporated milk</li>
+                            <li>Pinipig (crispy rice flakes, optional)</li>
+                        </ul>
+                        <h3>Instructions:</h3>
+                        <ol>
+                            <li>Layer the sweetened beans and fruits in a glass or bowl.</li>
+                            <li>Add a scoop of shaved ice on top.</li>
+                            <li>Top with leche flan, ube halaya, and a drizzle of evaporated milk.</li>
+                            <li>Sprinkle with pinipig (optional) and serve with a straw and spoon.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 recipe-card">
+            <div class="card h-100">
+                <img src="bukogulaman.jpg" class="card-img-top" alt="Buko Pandan">
+                <div class="card-body">
+                    <h5 class="card-title">Buko Pandan</h5>
+                    <p class="card-text">Young coconut strips and pandan-flavored gelatin in sweet cream. It’s creamy, aromatic, and very Pinoy.</p>
+                    <button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#bukoPandanModal">
+                        View Recipe
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="bukoPandanModal" tabindex="-1" aria-labelledby="bukoPandanModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="bukoPandanModalLabel">Buko Pandan Recipe</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img src="bukogulaman.jpg" class="img-fluid mb-3 mx-auto d-block" alt="BukoPandan">
+                        <h3>Ingredients:</h3>
+                        <ul>
+                            <li>1 young coconut (buko), shredded</li>
+                            <li>1 pack pandan-flavored gelatin, cut into cubes</li>
+                            <li>1 cup sweetened condensed milk</li>
+                            <li>1 cup all-purpose cream</li>
+                            <li>1/4 cup coconut milk (optional)</li>
+                            <li>1/4 cup sugar (optional)</li>
+                        </ul>
+                        <h3>Instructions:</h3>
+                        <ol>
+                            <li>In a bowl, mix the shredded coconut and pandan gelatin cubes.</li>
+                            <li>In another bowl, whisk together the condensed milk, all-purpose cream, and coconut milk (optional).</li>
+                            <li>Combine the coconut mixture with the cream mixture and stir well.</li>
+                            <li>Chill for at least 1 hour before serving. Serve chilled in a bowl or glass.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="col-md-6 col-lg-4 recipe-card">
+            <div class="card h-100">
+                <img src="turon.jpg" class="card-img-top" alt="Banana Turon">
+                <div class="card-body">
+                    <h5 class="card-title">Banana Turon</h5>
+                    <p class="card-text">Caramelized banana (and sometimes jackfruit) wrapped in lumpia wrapper and deep-fried. Crispy outside, gooey inside!</p>
+                    <button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#bananaTuronModal">
+                        View Recipe
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="bananaTuronModal" tabindex="-1" aria-labelledby="bananaTuronModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="bananaTuronModalLabel">Banana Turon Recipe</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img src="turon.jpg" class="img-fluid mb-3 mx-auto d-block" alt="BananaTuron">
+                        <h3>Ingredients:</h3>
+                        <ul>
+                            <li>4 ripe saba bananas, peeled and sliced lengthwise</li>
+                            <li>1/4 cup brown sugar</li>
+                            <li>1/4 cup jackfruit (optional)</li>
+                            <li>8-10 lumpia wrappers</li>
+                            <li>Oil for frying</li>
+                        </ul>
+                        <h3>Instructions:</h3>
+                        <ol>
+                            <li>Sprinkle the brown sugar on the sliced bananas, and optionally add jackfruit slices.</li>
+                            <li>Wrap the banana slices (and jackfruit) in lumpia wrappers, folding the sides tightly to seal.</li>
+                            <li>Heat oil in a pan over medium heat and fry the turon until golden brown and crispy.</li>
+                            <li>Drain excess oil and serve hot. Enjoy the crispy, gooey turon!</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<div class="col-md-6 col-lg-4 recipe-card">
+    <div class="card h-100">
+      <img src="ubehalaya.jpg" class="card-img-top" alt="Ube Halaya">
+      <div class="card-body">
+        <h5 class="card-title">Ube Halaya</h5>
+        <p class="card-text">Purple yam mashed and sweetened into a rich, creamy dessert. Often topped with cheese or coconut cream.</p>
+        <button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#ubeHalayaModal">
+          View Recipe
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="ubeHalayaModal" tabindex="-1" aria-labelledby="ubeHalayaModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ubeHalayaModalLabel">Ube Halaya Recipe</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="ubehalaya.jpg" class="img-fluid mb-3 mx-auto d-block" alt="UbeHalaya">
+          <h3>Ingredients:</h3>
+          <ul>
+            <li>2 cups grated ube (purple yam)</li>
+            <li>1 can condensed milk</li>
+            <li>1 can evaporated milk</li>
+            <li>1/2 cup butter or margarine</li>
+            <li>1/2 cup sugar (adjust to taste)</li>
+            <li>Grated cheese or coconut cream for topping (optional)</li>
+          </ul>
+          <h3>Instructions:</h3>
+          <ol>
+            <li>Heat butter in a pan, then add grated ube and stir continuously.</li>
+            <li>Add condensed milk, evaporated milk, and sugar. Mix well.</li>
+            <li>Cook over low heat, stirring until thick and smooth (about 30–40 minutes).</li>
+            <li>Transfer to a mold, let cool, and top with cheese or coconut cream.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-6 col-lg-4 recipe-card">
+    <div class="card h-100">
+      <img src="cassava.jpg" class="card-img-top" alt="Cassava Cake">
+      <div class="card-body">
+        <h5 class="card-title">Cassava Cake</h5>
+        <p class="card-text">Made from grated cassava, coconut milk, and condensed milk — soft, dense, and slightly chewy.</p>
+        <button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#cassavaCakeModal">
+          View Recipe
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="cassavaCakeModal" tabindex="-1" aria-labelledby="cassavaCakeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cassavaCakeModalLabel">Cassava Cake Recipe</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="cassava.jpg" class="img-fluid mb-3 mx-auto d-block" alt="CassavaCake">
+          <h3>Ingredients:</h3>
+          <ul>
+            <li>2 cups grated cassava</li>
+            <li>1 cup coconut milk</li>
+            <li>1/2 cup condensed milk</li>
+            <li>1/2 cup sugar</li>
+            <li>1/2 cup grated cheese</li>
+          </ul>
+          <h3>Instructions:</h3>
+          <ol>
+            <li>Preheat oven to 350°F (175°C).</li>
+            <li>Mix cassava, coconut milk, condensed milk, and sugar until well blended.</li>
+            <li>Pour into a greased baking dish and bake for 45–60 minutes or until firm.</li>
+            <li>Top with grated cheese and return to oven for 10 more minutes.</li>
+            <li>Cool before slicing. Serve warm or chilled.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-6 col-lg-4 recipe-card">
+    <div class="card h-100">
+      <img src="mangofloat.jpg" class="card-img-top" alt="Mango Float">
+      <div class="card-body">
+        <h5 class="card-title">Mango Float (Mango Royale)</h5>
+        <p class="card-text">Layers of graham crackers, sweet mangoes, and cream. Chilled to perfection and loved by locals and tourists alike.</p>
+        <button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#mangoFloatModal">
+          View Recipe
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="mangoFloatModal" tabindex="-1" aria-labelledby="mangoFloatModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="mangoFloatModalLabel">Mango Float Recipe</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="mangofloat.jpg" class="img-fluid mb-3 mx-auto d-block" alt="MangoFloat">
+          <h3>Ingredients:</h3>
+          <ul>
+            <li>2 ripe mangoes, sliced thinly</li>
+            <li>1 pack graham crackers</li>
+            <li>1 cup all-purpose cream</li>
+            <li>1/2 cup condensed milk</li>
+          </ul>
+          <h3>Instructions:</h3>
+          <ol>
+            <li>In a bowl, mix all-purpose cream and condensed milk. Chill for 10 minutes.</li>
+            <li>In a dish, layer graham crackers, then cream mixture, then mango slices.</li>
+            <li>Repeat the layers until ingredients are used up.</li>
+            <li>Top with more mangoes or crushed grahams. Chill for at least 4 hours or overnight.</li>
+            <li>Serve cold and enjoy the creamy, fruity layers!</li>
+          </ol>
+        </div>
+        </div>
+    </div>
+  </div>
+  
+  <div class="col-md-6 col-lg-4 recipe-card">
+    <div class="card h-100">
+      <img src="bukopie.jpg" class="card-img-top" alt="Buko Pie">
+      <div class="card-body">
+        <h5 class="card-title">Buko Pie</h5>
+        <p class="card-text">A flaky pie crust filled with soft young coconut meat and creamy filling. A Filipino bakery staple!</p>
+        <button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#bukoPieModal">
+          View Recipe
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="bukoPieModal" tabindex="-1" aria-labelledby="bukoPieModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="bukoPieModalLabel">Buko Pie Recipe</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="bukopie.jpg" class="img-fluid mb-3 mx-auto d-block" alt="BukoPie">
+          <h3>Ingredients:</h3>
+          <ul>
+            <li>2 cups young coconut meat (buko)</li>
+            <li>1/2 cup sugar</li>
+            <li>1/2 cup cornstarch dissolved in 1 cup coconut water</li>
+            <li>1/2 cup condensed milk</li>
+            <li>2 unbaked pie crusts (top and bottom)</li>
+          </ul>
+          <h3>Instructions:</h3>
+          <ol>
+            <li>Preheat oven to 375°F (190°C).</li>
+            <li>Cook coconut meat, sugar, condensed milk, and cornstarch mix until thick.</li>
+            <li>Pour filling into bottom pie crust. Cover with top crust and seal edges.</li>
+            <li>Poke holes on top to release steam. Bake for 30–40 minutes until golden.</li>
+            <li>Cool before slicing and serving.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-6 col-lg-4 recipe-card">
+    <div class="card h-100">
+      <img src="coconuticecream.jpg" class="card-img-top" alt="Coconut Ice Cream">
+      <div class="card-body">
+        <h5 class="card-title">Coconut Ice Cream</h5>
+        <p class="card-text">Often homemade in beach cafés, this ice cream highlights Siargao’s signature ingredient: fresh coconut!</p>
+        <button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#coconutIceCreamModal">
+          View Recipe
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="coconutIceCreamModal" tabindex="-1" aria-labelledby="coconutIceCreamModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="coconutIceCreamModalLabel">Coconut Ice Cream Recipe</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="coconuticecream.jpg" class="img-fluid mb-3 mx-auto d-block" alt="CoconutIceCream">
+          <h3>Ingredients:</h3>
+          <ul>
+            <li>2 cups coconut milk</li>
+            <li>1 cup heavy cream</li>
+            <li>1/2 cup sugar</li>
+            <li>1/2 cup grated fresh coconut (optional)</li>
+            <li>1 tsp vanilla extract</li>
+          </ul>
+          <h3>Instructions:</h3>
+          <ol>
+            <li>In a bowl, mix all ingredients until sugar is dissolved.</li>
+            <li>Churn in an ice cream maker, or freeze and stir every 30 minutes for 3 hours.</li>
+            <li>Let set overnight for best consistency. Serve chilled with toasted coconut flakes.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-6 col-lg-4 recipe-card">
+    <div class="card h-100">
+      <img src="camotecue.jpg" class="card-img-top" alt="Camote Cue">
+      <div class="card-body">
+        <h5 class="card-title">Camote Cue</h5>
+        <p class="card-text">Deep-fried caramelized sweet potatoes on skewers — a street-style treat that doubles as dessert or snack.</p>
+        <button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#camoteCueModal">
+          View Recipe
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="camoteCueModal" tabindex="-1" aria-labelledby="camoteCueModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="camoteCueModalLabel">Camote Cue Recipe</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="camotecue.jpg" class="img-fluid mb-3 mx-auto d-block" alt="CamoteCue">
+          <h3>Ingredients:</h3>
+          <ul>
+            <li>2 large sweet potatoes, sliced into rounds</li>
+            <li>1/2 cup brown sugar</li>
+            <li>2 cups cooking oil</li>
+            <li>Skewers for serving</li>
+          </ul>
+          <h3>Instructions:</h3>
+          <ol>
+            <li>Heat oil in a deep pan. Add sweet potatoes and cook halfway.</li>
+            <li>Sprinkle in brown sugar and stir until sweet potatoes are fully coated and caramelized.</li>
+            <li>Remove and drain on paper towels. Skewer for serving.</li>
+            <li>Best served hot and crispy!</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+      <footer style="background-color: #f4c095;" class="text-dark text-center py-3 mt-5">
+        <div class="container">
+          <p class="mb-0">© 2025 Flavors of Siargao | Taste the Island with CJ</p>
+        </div>
+      </footer>
+            
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+  document.getElementById('searchInput').addEventListener('keyup', function() {
+    let query = this.value.toLowerCase();
+    let cards = document.querySelectorAll('.recipe-card');
+
+    cards.forEach(function(card) {
+      let text = card.innerText.toLowerCase();
+      if (text.includes(query)) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>  

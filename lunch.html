@@ -1,0 +1,526 @@
+<!DOCTYPE html>     
+<html>
+<head>
+  <title>Lunch Recipes - Savorgao</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+     body {
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .card{
+      background-color: beige;
+    }
+    .card:hover {
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      transition: 0.3s ease;
+    }
+    .custom-navbar {
+      background-color: #f4c095;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    .navbar .navbar-brand {
+      font-family: 'Pacifico', cursive;
+      font-size: 2rem;
+      color: #3e2723 !important;
+    }
+
+    .navbar .nav-link {
+      color: #5d4037 !important;
+      font-weight: 600;
+    }
+
+      .navbar .nav-link:hover {
+        color: #e65100 !important;
+      }
+    h2 {
+      color: white; 
+      font-size: 2.5rem; 
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+    }
+    .btn-outline-secondary {
+      border-color: white; 
+      color: white; 
+    }
+    .btn-outline-secondary:hover {
+      background-color: white; 
+      color: #8B0000; 
+    }
+    .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="savorgaologo.png" alt="Savorgao Logo" style="height: 50px; width: 50px; border-radius: 50%; margin-right: 10px;">
+            Savorgao
+          </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="recipes.html">Recipes</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+<div class="container mt-4 text-center">
+  <h2 class="mb-4">Lunch Recipes</h2>
+  <a href="recipes.html" class="btn btn-outline-secondary mb-4">← Back to Recipes</a>
+</div>
+
+<div class="container mb-4">
+  <input type="text" id="searchInput" class="form-control" placeholder="Search food...">
+</div>
+
+<div class="container">
+    <div class="row g-4" id="recipeList">
+
+        <div class="col-md-6 col-lg-4 recipe-card">
+            <div class="card h-100">
+                <img src="kinilawnaisda.jpg" class="card-img-top" alt="Kinilaw na Isda">
+                <div class="card-body">
+                    <h5 class="card-title">Kinilaw na Isda</h5>
+                    <p class="card-text">Freshly caught fish marinated in vinegar, calamansi, ginger, onions, and chili. Siargao’s version often uses tangigue (Spanish mackerel) and coconut vinegar.</p>
+                    <button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#kinilawModal">
+                        View Recipe
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="kinilawModal" tabindex="-1" aria-labelledby="kinilawModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="kinilawModalLabel">Kinilaw na Isda Recipe</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="kinilawnaisda.jpg" class="img-fluid mb-3 mx-auto d-block" alt="Kinilaw na Isda">
+                        <h3>Ingredients:</h3>
+                        <ul>
+                            <li>Fresh tangigue (Spanish mackerel), cut into cubes</li>
+                            <li>1/2 cup vinegar (coconut vinegar preferred)</li>
+                            <li>2-3 calamansi or 1 lemon, juiced</li>
+                            <li>1 small onion, thinly sliced</li>
+                            <li>1-inch ginger, julienned</li>
+                            <li>2-3 bird’s eye chilies, sliced</li>
+                            <li>Salt and pepper to taste</li>
+                        </ul>
+                        <h3>Instructions:</h3>
+                        <ol>
+                            <li>Combine fish, vinegar, and calamansi/lemon juice in a bowl. Let sit for 10-15 minutes to marinate.</li>
+                            <li>Mix in onions, ginger, and chilies. Season with salt and pepper.</li>
+                            <li>Serve immediately or chill before serving for extra flavor.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 recipe-card">
+            <div class="card h-100">
+                <img src="adobongpusit.jpg" class="card-img-top" alt="Adobong Pusit">
+                <div class="card-body">
+                    <h5 class="card-title">Adobong Pusit (Squid Adobo)</h5>
+                    <p class="card-text">Tender squid cooked in its ink with garlic, vinegar, and soy sauce. Popular by the beach!</p>
+                    <button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#pusitModal">
+                        View Recipe
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="pusitModal" tabindex="-1" aria-labelledby="pusitModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="pusitModalLabel">Adobong Pusit Recipe</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="adobongpusit.jpg" class="img-fluid mb-3 mx-auto d-block" alt="Adobong Pusit">
+                        <h3>Ingredients:</h3>
+                        <ul>
+                            <li>500g squid, cleaned and cut into rings</li>
+                            <li>1/4 cup soy sauce</li>
+                            <li>2 tbsp vinegar</li>
+                            <li>4 cloves garlic, minced</li>
+                            <li>1/2 onion, sliced</li>
+                            <li>1 bay leaf</li>
+                            <li>1 tbsp cooking oil</li>
+                            <li>Salt and pepper to taste</li>
+                        </ul>
+                        <h3>Instructions:</h3>
+                        <ol>
+                            <li>Heat oil in a pan and sauté garlic and onion until fragrant.</li>
+                            <li>Add squid and cook for 2-3 minutes until tender.</li>
+                            <li>Pour in soy sauce and vinegar, and add bay leaf. Let it simmer for 10 minutes.</li>
+                            <li>Season with salt and pepper. Serve with steamed rice.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+<div class="col-md-6 col-lg-4 recipe-card">
+            <div class="card h-100">
+                <img src="seafoodkarekare.jpg" class="card-img-top" alt="Seafood Kare-Kare">
+                <div class="card-body">
+                    <h5 class="card-title">Seafood Kare-Kare</h5>
+                    <p class="card-text">A local twist on the peanut stew using crab, shrimp, and squid instead of oxtail.</p>
+                    <button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#karekareModal">
+                        View Recipe
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="karekareModal" tabindex="-1" aria-labelledby="karekareModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="karekareModalLabel">Seafood Kare-Kare Recipe</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="seafoodkarekare.jpg" class="img-fluid mb-3 mx-auto d-block" alt="Seafood Kare-Kare">
+                        <h3>Ingredients:</h3>
+                        <ul>
+                            <li>1 crab, cleaned</li>
+                            <li>200g shrimp, peeled</li>
+                            <li>200g squid, cleaned and sliced</li>
+                            <li>1/2 cup peanut butter</li>
+                            <li>1 cup water or seafood broth</li>
+                            <li>1/2 cup bagoong (fermented shrimp paste)</li>
+                            <li>1/2 cup banana heart, sliced</li>
+                            <li>1/2 cup eggplant, sliced</li>
+                            <li>1/2 cup string beans, cut into pieces</li>
+                        </ul>
+                        <h3>Instructions:</h3>
+                        <ol>
+                            <li>Boil seafood (crab, shrimp, squid) in water or seafood broth for 5-7 minutes until cooked. Set aside.</li>
+                            <li>In a separate pot, sauté peanut butter and mix with the broth to create the kare-kare sauce.</li>
+                            <li>Add vegetables (banana heart, eggplant, string beans) to the sauce and cook until tender.</li>
+                            <li>Return the seafood to the pot and mix. Serve with bagoong on the side.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 recipe-card">
+            <div class="card h-100">
+                <img src="inihawnapanga.png" class="card-img-top" alt="Inihaw na Panga ng Tuna">
+                <div class="card-body">
+                    <h5 class="card-title">Inihaw na Panga ng Tuna</h5>
+                    <p class="card-text">Grilled tuna jaw, smoky and juicy, served with soy-vinegar dip and rice.</p>
+                    <button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#tunaModal">
+                        View Recipe
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="tunaModal" tabindex="-1" aria-labelledby="tunaModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="tunaModalLabel">Inihaw na Panga ng Tuna Recipe</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="inihawnapanga.png" class="img-fluid mb-3 mx-auto d-block" alt="Inihaw na Panga ng Tuna">
+                        <h3>Ingredients:</h3>
+                        <ul>
+                            <li>1 tuna jaw (panga ng tuna)</li>
+                            <li>2 tbsp soy sauce</li>
+                            <li>1 tbsp vinegar</li>
+                            <li>1 clove garlic, minced</li>
+                            <li>1 tbsp calamansi juice</li>
+                            <li>Salt and pepper to taste</li>
+                            <li>Cooked rice for serving</li>
+                        </ul>
+                        <h3>Instructions:</h3>
+                        <ol>
+                            <li>Marinate the tuna jaw with soy sauce, vinegar, garlic, calamansi juice, salt, and pepper for 30 minutes.</li>
+                            <li>Grill the tuna jaw over medium heat until smoky and cooked through.</li>
+                            <li>Serve with soy-vinegar dip and steamed rice.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+     
+        <div class="col-md-6 col-lg-4 recipe-card">
+            <div class="card h-100">
+                <img src="ginataangalimasag.jpg" class="card-img-top" alt="Ginataang Alimasag">
+                <div class="card-body">
+                    <h5 class="card-title">Ginataang Alimasag (Crabs in Coconut Milk)</h5>
+                    <p class="card-text">Mud crabs simmered in creamy coconut milk with leafy greens and chili – rich and flavorful.</p>
+                    <button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#ginataangModal">
+                        View Recipe
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="ginataangModal" tabindex="-1" aria-labelledby="ginataangModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="ginataangModalLabel">Ginataang Alimasag Recipe</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="ginataangalimasag.jpg" class="img-fluid mb-3 mx-auto d-block" alt="Ginataang Alimasag">
+                        <h3>Ingredients:</h3>
+                        <ul>
+                            <li>1 kg mud crabs, cleaned</li>
+                            <li>2 cups coconut milk</li>
+                            <li>1 onion, chopped</li>
+                            <li>1-inch ginger, sliced</li>
+                            <li>2-3 bird’s eye chilies, sliced</li>
+                            <li>1 bunch kangkong (water spinach) or any leafy greens</li>
+                            <li>Salt and pepper to taste</li>
+                        </ul>
+                        <h3>Instructions:</h3>
+                        <ol>
+                            <li>In a pot, sauté onion and ginger until fragrant.</li>
+                            <li>Add the crabs and cook for 5-7 minutes, then pour in coconut milk.</li>
+                            <li>Simmer for 15-20 minutes, then add the kangkong and chilies.</li>
+                            <li>Season with salt and pepper, then serve hot.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="col-md-6 col-lg-4 recipe-card">
+            <div class="card h-100">
+                <img src="paksiwbangus.jpg" class="card-img-top" alt="Paksiw na Isda">
+                <div class="card-body">
+                    <h5 class="card-title">Paksiw na Isda</h5>
+                    <p class="card-text">A vinegar-based fish stew with eggplant, bitter gourd, and garlic – simple, sour, and savory.</p>
+                    <button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#paksiwModal">
+                        View Recipe
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="paksiwModal" tabindex="-1" aria-labelledby="paksiwModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="paksiwModalLabel">Paksiw na Isda Recipe</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="paksiwbangus.jpg" class="img-fluid mb-3 mx-auto d-block" alt="Paksiw na Isda">
+                        <h3>Ingredients:</h3>
+                        <ul>
+                            <li>1 kg fish (bangus or tilapia), cut into pieces</li>
+                            <li>1 medium eggplant, sliced</li>
+                            <li>1 bitter gourd, sliced</li>
+                            <li>4 cloves garlic, minced</li>
+                            <li>1/2 cup vinegar</li>
+                            <li>1/4 cup water</li>
+                            <li>1 onion, chopped</li>
+                            <li>1-2 bay leaves</li>
+                            <li>Salt and pepper to taste</li>
+                        </ul>
+                        <h3>Instructions:</h3>
+                        <ol>
+                            <li>In a pot, layer the fish with garlic, eggplant, and bitter gourd.</li>
+                            <li>Pour in vinegar, water, and season with salt and pepper.</li>
+                            <li>Simmer for 15-20 minutes until the fish is tender and the flavors meld.</li>
+                            <li>Serve hot with steamed rice.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 recipe-card">
+            <div class="card h-100">
+                <img src="siniganghipon.jpg" class="card-img-top" alt="Sinigang na Hipon">
+                <div class="card-body">
+                    <h5 class="card-title">Sinigang na Hipon</h5>
+                    <p class="card-text">Shrimp in tamarind-based sour soup with vegetables – a refreshing coastal comfort dish.</p>
+                    <button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#hiponModal">
+                        View Recipe
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="hiponModal" tabindex="-1" aria-labelledby="hiponModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="hiponModalLabel">Sinigang na Hipon Recipe</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="siniganghipon.jpg" class="img-fluid mb-3 mx-auto d-block" alt="Sinigang na Hipon">
+                        <h3>Ingredients:</h3>
+                        <ul>
+                            <li>500g shrimp, peeled and deveined</li>
+                            <li>1 pack sinigang mix or 1/4 cup fresh tamarind paste</li>
+                            <li>2 medium tomatoes, quartered</li>
+                            <li>1 onion, quartered</li>
+                            <li>1 eggplant, sliced</li>
+                            <li>1 bunch kangkong (water spinach)</li>
+                            <li>2-3 long green chili peppers</li>
+                            <li>Salt and pepper to taste</li>
+                        </ul>
+                        <h3>Instructions:</h3>
+                        <ol>
+                            <li>Bring water to a boil in a pot, then add tomatoes, onion, and tamarind mix/paste.</li>
+                            <li>Simmer for 5-10 minutes, then add shrimp and cook for another 3-5 minutes.</li>
+                            <li>Add vegetables (eggplant, kangkong) and green chilies, then season with salt and pepper.</li>
+                            <li>Serve hot with steamed rice.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 recipe-card">
+            <div class="card h-100">
+                <img src="chickeninasal.jpg" class="card-img-top" alt="Inasal na Manok">
+                <div class="card-body">
+                    <h5 class="card-title">Inasal na Manok (Grilled Chicken)</h5>
+                    <p class="card-text">Visayan-style marinated chicken grilled to perfection, often served with spicy soy-vinegar sauce.</p>
+                    <button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#inasalModal">
+                        View Recipe
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="inasalModal" tabindex="-1" aria-labelledby="inasalModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="inasalModalLabel">Inasal na Manok Recipe</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="chickeninasal.jpg" class="img-fluid mb-3 mx-auto d-block" alt="Inasal na Manok">
+                        <h3>Ingredients:</h3>
+                        <ul>
+                            <li>1 whole chicken, cut into serving parts</li>
+                            <li>1/4 cup soy sauce</li>
+                            <li>1/4 cup vinegar</li>
+                            <li>4 cloves garlic, minced</li>
+                            <li>1 tablespoon brown sugar</li>
+                            <li>1 tablespoon calamansi juice</li>
+                            <li>1 tablespoon annatto oil (or regular cooking oil)</li>
+                            <li>Salt and pepper to taste</li>
+                        </ul>
+                        <h3>Instructions:</h3>
+                        <ol>
+                            <li>Combine soy sauce, vinegar, garlic, sugar, calamansi juice, and annatto oil to create the marinade.</li>
+                            <li>Marinate the chicken for at least 1 hour, preferably overnight.</li>
+                            <li>Grill the chicken over medium heat for 15-20 minutes or until cooked through, basting with the marinade while grilling.</li>
+                            <li>Serve with spicy soy-vinegar dipping sauce.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 recipe-card">
+            <div class="card h-100">
+                <img src="friedbaboy.jpg" class="card-img-top" alt="Lechon Kawali with Sukang Pinakurat">
+                <div class="card-body">
+                    <h5 class="card-title">Lechon Kawali with Sukang Pinakurat</h5>
+                    <p class="card-text">Crispy pork belly served with local spicy vinegar made in Mindanao – crunchy outside, juicy inside.</p>
+                    <button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#lechonModal">
+                        View Recipe
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="lechonModal" tabindex="-1" aria-labelledby="lechonModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="lechonModalLabel">Lechon Kawali with Sukang Pinakurat Recipe</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="friedbaboy.jpg" class="img-fluid mb-3 mx-auto d-block" alt="Lechon Kawali with Sukang Pinakurat">
+                        <h3>Ingredients:</h3>
+                        <ul>
+                            <li>1 kg pork belly, cut into chunks</li>
+                            <li>5 cloves garlic, crushed</li>
+                            <li>2 bay leaves</li>
+                            <li>1 tsp peppercorns</li>
+                            <li>Salt to taste</li>
+                            <li>Oil for frying</li>
+                            <li>For Sukang Pinakurat: 1/4 cup vinegar, 2-3 bird’s eye chilies, 1/4 cup soy sauce, 1 tbsp brown sugar</li>
+                        </ul>
+                        <h3>Instructions:</h3>
+                        <ol>
+                            <li>In a pot, boil pork belly with garlic, bay leaves, peppercorns, and salt for 1-2 hours until tender.</li>
+                            <li>Let the pork cool and dry completely, then deep fry until crispy.</li>
+                            <li>For the Sukang Pinakurat, mix vinegar, soy sauce, chilies, and brown sugar in a bowl.</li>
+                            <li>Serve the crispy lechon kawali with the spicy vinegar dip on the side.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+
+      
+      <footer style="background-color: tan;" class="text-dark text-center py-3 mt-5">
+        <div class="container">
+          <p class="mb-0">© 2025 Flavors of Siargao | Taste the Island with CJ</p>
+        </div>
+      </footer>
+            
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+  document.getElementById('searchInput').addEventListener('keyup', function() {
+    let query = this.value.toLowerCase();
+    let cards = document.querySelectorAll('.recipe-card');
+
+    cards.forEach(function(card) {
+      let text = card.innerText.toLowerCase();
+      if (text.includes(query)) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>  

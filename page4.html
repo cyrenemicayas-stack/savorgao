@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Siargao Food Crawl Itinerary</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Quicksand', sans-serif;
+            color: #333;
+        }
+
+        h1, h2 {
+            color: #e85d04;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        h3 {
+            color: #5c3317;
+            font-weight: 600;
+        }
+
+        .day-section {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #222;
+        }
+
+        img {
+            border-radius: 0.75rem;
+            margin: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            width: 100%;
+            height: auto;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #d00000;
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 2px solid #d00000;
+            font-size: 1.2rem;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: #e85d04;
+            border-bottom: 2px solid #e85d04;
+        }
+
+        iframe {
+            border-radius: 1rem;
+            margin-top: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            background: rgba(255, 253, 235, 0.9);
+            padding: 2rem;
+            border-radius: 1rem;
+            margin-top: 3rem;
+        }
+
+        .container h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .day-section h2 {
+            font-size: 1.8rem;
+        }
+
+        .day-section h3 {
+            font-size: 1.4rem;
+            margin-top: 1rem;
+        }
+
+        .day-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .day-content .text {
+            flex: 1 1 45%;
+        }
+
+        .day-content .image {
+            flex: 1 1 45%;
+            max-width: 500px;
+        }
+
+        .day-content img {
+            width: 100%;
+            border-radius: 0.75rem;
+        }
+
+        .day-section p {
+            font-size: 1.15rem;
+            color: #222;
+        }
+
+        .day-section h3 {
+            color: #e85d04;
+            font-size: 1.5rem;
+        }
+
+        .day-content .text a {
+            font-size: 1.3rem;
+            color: #d00000;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .day-content .text a:hover {
+            background-color: #e85d04;
+            color: white;
+        }
+
+        .custom-pagination .page-link {
+            color: #111;
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            padding: 0.75rem 1.25rem;
+            border-radius: 0.5rem;
+            margin: 0 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .custom-pagination .page-link:hover {
+            background-color: #ffe082;
+            color: #000;
+            border-color: #ffc107;
+        }
+
+        .custom-pagination .active .page-link {
+            background-color: #ffb300;
+            border-color: #ffb300;
+            color: #fff;
+        }
+
+        .custom-pagination .page-item.disabled .page-link {
+            color: #999;
+            pointer-events: none;
+            background-color: #eee;
+            border-color: #ddd;
+        }
+
+        .logo-img {
+            height: 60px;
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+
+        
+    <nav class="navbar shadow-lg" style="background-color: #f4c095;">
+        <div class="container-fluid justify-content-center">
+            <img src="savorgaologo.png" alt="Savorgao Logo" class="logo-img me-2">
+          <span class="navbar-brand mb-0 h1 fs-1" style="font-family: 'Pacifico', cursive; color: #5c3317;">
+            Savorgao
+          </span>
+        </div>
+      </nav>
+
+    <div class="container my-5">
+        <h1 class="text-center mb-5">Siargao Food Crawl Itinerary</h1>
+
+        <div class="day-section">
+            <h2> Day 1: General Luna – A Day of Beachside Dining & Sunset Views</h2>
+            
+            <div class="day-content">
+                <div class="text">
+                    <h3>Morning:</h3>
+                    <p><strong>Mama’s Grill</strong> – A local favorite for hearty breakfast or brunch. Enjoy grilled meats and home-cooked Filipino classics. This is a beloved Filipino restaurant chain that has captured the hearts of locals and tourists alike, especially in Siargao. Known for its delicious and affordable grilled dishes, the restaurant offers a cozy, open-air dining experience perfect for families and groups. Some of their standout offerings include Inihaw na Liempo (grilled pork belly), Inihaw na Baboy (grilled pork), Inihaw na Manok (grilled chicken), and sizzling Sisig, complemented by refreshing Halo-Halo for dessert. The relaxed atmosphere, often accompanied by live acoustic music, makes Mama's Grill a favorite spot for an enjoyable meal in a tropical setting. Whether you're a fan of barbecue or looking for authentic Filipino flavors, Mama's Grill provides a satisfying and memorable dining experience.</p>
+                    <a href="https://www.tripadvisor.com.ph/Restaurant_Review-g674645-d9561844-Reviews-Mama_s_Grill-Siargao_Island_Surigao_del_Norte_Province_Mindanao.html">Read more</a>
+                </div>
+                <div class="image">
+                    <img src="mamasgrill.webp" alt="Mama's Grill">
+                </div>
+            </div>
+
+            <div class="day-content">
+                <div class="text">
+                    <h3>Midday:</h3>
+                    <p><strong>Shaka Siargao</strong> – Fresh smoothie bowls and wraps with a view of Cloud 9. is a vibrant beachfront café famous for its fresh, healthy offerings and relaxed island vibe. Located near the iconic Cloud 9 surf spot, it’s a favorite among travelers and surfers looking for nourishing meals after a day in the sun. The menu features colorful smoothie bowls, fresh fruit juices, hearty wraps, and vegan-friendly options—all served with a view of the ocean. With its eco-conscious ethos and tropical atmosphere, Shaka perfectly captures the laid-back, health-conscious spirit of Siargao.                    </p>
+                    <a href="https://www.tripadvisor.com.ph/Restaurant_Review-g2048776-d8796904-Reviews-Shaka_Siargao-General_Luna_Siargao_Island_Surigao_del_Norte_Province_Mindanao.html">Read more</a>
+                </div>
+                <div class="image">
+                    <img src="shaka.jpg" alt="Shaka Siargao">
+                </div>
+            </div>
+
+            <div class="day-content">
+                <div class="text">
+                    <h3>Afternoon:</h3>
+                    <p><strong>Bravo Restaurant</strong> – Enjoy seafood paella and tapas at the beachside. It nestled within Bravo Beach Resort in General Luna, Siargao, offers a delightful fusion of Spanish and Asian cuisines, creating a unique dining experience that reflects the island's diverse culinary influences. Guests can savor dishes like the Slow Cooked Pork Curry, enriched with coconut sambal, and the Tuna Tataki, a pan-seared tuna delicacy infused with Japanese flair. The restaurant's beachfront location provides picturesque views of the Pesangan Reef and the Pacific Ocean, enhancing the dining ambiance. With its thatched roof and open-air design, Bravo Restaurant exudes a laid-back, tropical vibe, making it an ideal spot for both intimate meals and lively gatherings.</p>
+                    <a href="https://www.tripadvisor.com.ph/Restaurant_Review-g2048776-d9774288-Reviews-Bravo_Restaurant-General_Luna_Siargao_Island_Surigao_del_Norte_Province_Mindanao.html">Read more</a>
+                </div>
+                <div class="image">
+                    <img src="bravorestaurant.jpg" alt="Bravo Restaurant">
+                </div>
+            </div>
+
+            <div class="day-content">
+                <div class="text">
+                    <h3>Evening:</h3>
+                    <p><strong>Kermit Siargao</strong> – Famous for wood-fired pizza and cocktails. Shaka Siargao is a popular beachfront café located near the famous Cloud 9 surf break. Known for its vibrant smoothie bowls, fresh juices, and wholesome plant-based dishes, Shaka offers a health-conscious menu that caters to both surfers and travelers seeking nutritious options. Its laid-back atmosphere and scenic ocean views make it a favorite spot for breakfast and brunch enthusiasts visiting Siargao.</p>
+                    <a href="https://www.kermitsiargao.com/">Read more</a>
+                </div>
+                <div class="image">
+                    <img src="kermit.jpg" alt="Kermit Siargao">
+                </div>
+            </div>
+            <hr></hr>
+            <h3>Watch: Siargao Food Tour</h3>
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/hqSAIh6wLSg" allowfullscreen></iframe>
+        </div>
+
+
+        <div class="day-section">
+            <h2> Day 2: Dapa – Dive Deeper into Local Flavors</h2>
+
+            <div class="day-content">
+                <div class="text">
+                    <h3>Morning:</h3>
+                    <p><strong>Catangan BBQ</strong> – Grab some skewered BBQ and enjoy a quick, filling breakfast. This beloved local spot offers affordable grilled meals.  is a local eatery renowned for its affordable and delicious grilled meats. It's a favorite among residents and visitors looking for a quick, satisfying meal. The casual atmosphere and flavorful barbecue make it a staple in the Siargao food scene.</p>
+                    <a href="https://mindtrip.ai/attraction/general-luna-mindanao/catangnan-bbq/at-W7mwnIgY">Read more</a>
+                </div>
+                <div class="image">
+                    <img src="catangnanbbq.jpg" alt="Catangan BBQ">
+                </div>
+            </div>
+
+            <div class="day-content">
+                <div class="text">
+                    <h3>Midday:</h3>
+                    <p><strong>La Carinderia</strong> – Casual lunch with a mix of Filipino and Italian comfort food. Don't miss their spaghetti calamari or adobo. is a charming, family-run restaurant that masterfully blends Filipino and Italian culinary traditions. Known for dishes like guazzetto di pesce (a slow-cooked seafood stew) and calamansi negroni, it offers a unique dining experience that reflects the island's diverse cultural influences. With its warm hospitality and flavorful menu, La Carinderia stands out as a culinary gem in Siargao.​</p>
+                    <a href="https://www.tripadvisor.com.ph/Restaurant_Review-g674645-d10753925-Reviews-La_Carinderia-Siargao_Island_Surigao_del_Norte_Province_Mindanao.html">Read more</a>
+                </div>
+                <div class="image">
+                    <img src="lacarinderia.jpg" alt="La Carinderia">
+                </div>
+            </div>
+
+            <div class="day-content">
+                <div class="text">
+                    <h3>Afternoon:</h3>
+                    <p><strong>Sibol Siargao</strong> – is a vibrant and popular café located on the beautiful island of Siargao. It is known for its cozy, laid-back ambiance and its focus on serving fresh, locally-sourced ingredients. The café offers a range of delightful dishes, from healthy smoothie bowls to hearty breakfast options and savory lunch choices. It is a great spot for both locals and tourists looking for a comfortable place to relax while enjoying wholesome meals. Sibol Siargao is also a favorite for its specialty coffee, making it an ideal place to unwind with a cup of freshly brewed coffee while soaking in the serene island vibes. Whether you're a health-conscious foodie or just looking for a quiet escape, Sibol Siargao provides a welcoming atmosphere for all.</p>
+                    <a href="hhttps://www.tripadvisor.com.ph/Restaurant_Review-g2048776-d24066900-Reviews-Sibol_Siargao-General_Luna_Siargao_Island_Surigao_del_Norte_Province_Mindanao.html">Read more</a>
+                </div>
+                <div class="image">
+                    <img src="sibol.jpg" alt="Sibol Siargao">
+                </div>
+            </div>
+            <hr></hr>
+            <h3> Watch: More Siargao Food Tour</h3>
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/CyJOvFGrLyk?si=AJxG8lvRKuSNrYQN" allowfullscreen></iframe>
+        </div>
+
+        <div class="day-section">
+            <h2>Day 3: Catangnan – Explore Siargao's Hidden Gems</h2>
+
+            <div class="day-content">
+                <div class="text">
+                    <h3>Morning:</h3>
+                    <p><strong>Naga Siargao</strong> – is a contemporary café and restaurant located in General Luna, Siargao Island. Known for its minimalist design and laid-back atmosphere, it offers a variety of dishes with a focus on fresh, locally sourced ingredients. The menu features a mix of Filipino and international flavors, catering to both health-conscious diners and those seeking indulgent comfort food. Naga Siargao is also recognized for its specialty coffee and refreshing beverages, making it a popular spot for both locals and tourists looking to relax and enjoy a meal in a cozy setting. </p>
+                    <a href="https://www.tripadvisor.com.ph/Restaurant_Review-g2048776-d26249981-Reviews-NAGA_Siargao-General_Luna_Siargao_Island_Surigao_del_Norte_Province_Mindanao.html">Read more</a>
+                </div>
+                <div class="image">
+                    <img src="naga.jpg" alt="Naga Siargao">
+                </div>
+            </div>
+
+            <div class="day-content">
+                <div class="text">
+                    <h3>Midday:</h3>
+                    <p><strong>Cafe Loka</strong> – Great for relaxing with fresh salads and smoothie bowls. Cafe Loka is a relaxing café in Siargao, offering fresh salads and smoothie bowls. It's an ideal spot for those looking to enjoy healthy and refreshing meals in a laid-back setting.</p>
+                    <a href="https://www.tripadvisor.com.ph/Restaurant_Review-g8706248-d7992082-Reviews-Cafe_Loka-Catangnan_Siargao_Island_Surigao_del_Norte_Province_Mindanao.html">Read more</a>
+                </div>
+                <div class="image">
+                    <img src="cafeloka.jpg" alt="Cafe Loka">
+                </div>
+            </div>
+            <hr></hr>
+            <h3>Watch: Siargao Food Tour</h3>
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/zWgg5hWccog?si=FLRkEk4eOrG0jTig" allowfullscreen></iframe>
+        </div>
+        </div>
+
+    </div>
+
+    <div class="container-fluid mt-5">
+        <div class="row justify-content-center">
+          <div class="col-auto text-center">
+            <div style="
+              font-family: 'Pacifico', cursive;
+              font-size: 2.5rem;
+              font-weight: 700;
+              letter-spacing: 2px;
+              text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            ">
+              <span style="color: #ffe082;">S</span>
+              <span style="color: #ffcc80;">A</span>
+              <span style="color: #ffb74d;">V</span>
+              <span style="color: #ffca28;">O</span>
+              <span style="color: #ffb300;">O</span>
+              <span style="color: #ff8f00;">R</span>
+              <span style="color: #ffa726;">G</span>
+              <span style="color: #ffcc80;">A</span>
+              <span style="color: #ffe082;">O</span>
+            </div>
+          </div>
+        </div>
+      
+        <nav aria-label="Recipe page navigation" class="d-flex justify-content-center mt-4">
+          <ul class="pagination pagination-lg custom-pagination">
+      
+            <li class="page-item">
+              <a class="page-link" href="page3.html" aria-label="Previous">
+                ‹ Prev
+              </a>
+            </li>
+      
+            <li class="page-item" id="page1"><a class="page-link" href="recipes.html">1</a></li>
+            <li class="page-item" id="page2"><a class="page-link" href="page2.html">2</a></li>
+            <li class="page-item" id="page3"><a class="page-link" href="page3.html">3</a></li>
+            <li class="page-item" id="page4"><a class="page-link" href="page4.html">4</a></li>
+      
+            <li class="page-item">
+              <a class="page-link" href="recipes.html" aria-label="Next">
+                Next ›
+              </a>
+            </li>
+      
+          </ul>
+        </nav>
+      </div>
+    
+      <script>
+    
+        const pageItems = document.querySelectorAll('.page-item');
+        pageItems.forEach(item => {
+          item.addEventListener('click', function() {
+            pageItems.forEach(page => page.classList.remove('active'));
+            item.classList.add('active');
+          });
+        });
+        document.getElementById("page4").classList.add("active");
+      </script>
+
+<footer style="background-color: #f4c095;" class="text-dark text-center py-3 mt-5">
+    <div class="foot">
+      <p class="mb-0">© 2025 Flavors of Siargao | Taste the Island with CJ</p>
+    </div>
+  </footer>
+        
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>Siargao Food Culture & Traditions</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      font-family: 'Quicksand', sans-serif;
+      text-shadow: 1px 1px 2px #000;
+    }
+    .section-title {
+      color: #ffe082;
+      font-family: 'Pacifico', cursive;
+      font-weight: bold;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px #000;
+    }
+    .card-body {
+      padding: 1.5rem;
+      color: #333;
+    }
+    .traditional-methods img {
+      max-height: 300px;
+      object-fit: cover;
+    }
+    .card-img-top {
+      border-radius: 10px;
+    }
+    .card {
+      background-color: #fff8e1;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .section-container {
+      padding: 3rem 0;
+    }
+    .img-fluid {
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    p, ul {
+      font-size: 1.15rem;
+    }
+    li {
+      margin-bottom: 12px;
+    }
+    .custom-pagination .page-link {
+    color: #111;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    margin: 0 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .custom-pagination .page-link:hover {
+    background-color: #ffe082;
+    color: #000;
+    border-color: #ffc107;
+  }
+
+  .custom-pagination .active .page-link {
+    background-color: #ffb300;
+    border-color: #ffb300;
+    color: #fff;
+  }
+
+  .custom-pagination .page-item.disabled .page-link {
+    color: #999;
+    pointer-events: none;
+    background-color: #eee;
+    border-color: #ddd;
+  }
+  .transparent-bg {
+  background-color: rgba(0, 0, 0, 0.4); 
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin-bottom: 3%;
+}
+
+
+  </style>
+</head>
+<body>
+    
+
+    <nav class="navbar shadow-lg" style="background-color: #f4c095;">
+        <div class="container justify-content-center">
+            <img src="savorgaologo.png" alt="Savorgao Logo" style="height: 50px; margin-right: 10px;">
+          <span class="navbar-brand mb-0 h1 fs-1" style="font-family: 'Pacifico', cursive; color: #5c3317;">
+            Savorgao
+          </span>
+        </div>
+      </nav>
+
+<div class="container section-container">
+
+  <div class="row mb-5">
+    <div class="col-12">
+      <h2 class="section-title">The History of Siargao Cuisine</h2>
+      <div class="transparent-bg">
+      <p>
+        Siargao’s food culture is a vibrant reflection of the island’s geography, history, and indigenous heritage.
+        Influenced by Austronesian roots and later by Spanish, Chinese, and other Southeast Asian traders, its cuisine evolved 
+        through centuries of resourcefulness. Coastal communities relied on the sea for sustenance, while inland communities 
+        incorporated root crops and leafy greens.
+        Today, Siargao’s culinary scene blends ancient wisdom with modern creativity, preserving time-honored recipes and techniques.
+      </p>
+    </div>
+  </div>
+
+  <div class="row mb-5">
+  <div class="col-md-6">
+      <img src="festivalfood.png" class="img-fluid rounded" alt="Festival Food" />
+    </div>
+  
+    <div class="col-md-6">
+      <h3 class="section-title">How Local Festivals Influence Food</h3>
+      <div class="transparent-bg">
+        <p>
+          Festivals like the <strong>Siargao Festival</strong> and <strong>Lunar New Year</strong> celebrations are times when kitchens come alive across the island. 
+          These events are not only social and spiritual gatherings, but also showcases of culinary pride. 
+          Dishes like <em>kinilaw</em>, <em>lechon</em>, and <em>biko</em> are prepared in abundance and shared with neighbors, reinforcing a strong sense of community.
+          Food is seen as a symbol of unity, gratitude, and abundance.
+        </p>
+      </div>
+    </div>
+  </div>
+<hr></hr>
+
+  <div class="row traditional-methods my-4">
+    <div class="col-12">
+      <h3 class="section-title"> Traditional Cooking Methods</h3>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <div class="card">
+        <img src="bamboogrilling.png" class="card-img-top" alt="Bamboo Grilling">
+        <div class="card-body">
+          <h5 class="card-title">Bamboo Grilling</h5>
+          <p class="card-text">
+            This method involves wrapping marinated fish or pork in bamboo tubes and slow-cooking them over open fire. 
+            The bamboo imparts a subtle earthy flavor, while the method preserves moisture and aroma.
+            It's often used during beach gatherings and family cookouts, keeping the practice deeply rooted in community life.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <div class="card">
+        <img src="claypotcooking.jpg" class="card-img-top" alt="Clay Pot Cooking">
+        <div class="card-body">
+          <h5 class="card-title">Clay Pot Cooking (Palayok)</h5>
+          <p class="card-text">
+            This age-old technique uses unglazed clay pots for slow cooking. The porous material allows flavors to deepen as steam recirculates.
+            Dishes like <em>laing</em> and <em>sinigang</em> are traditionally cooked this way, producing rich broths and tender meats 
+            that capture the essence of home-cooked island meals.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr></hr>
+
+
+  <div class="row">
+    <div class="col-12">
+      <h2 class="section-title "> Culinary Values & Modern Influence</h2>
+      <div class="transparent-bg">
+      <p>
+        Siargao’s cuisine is more than just a collection of recipes—it reflects the values of community, simplicity, and sustainability. 
+        Traditional food preparation often emphasizes <strong>shared labor</strong>, <strong>locally sourced ingredients</strong>, and <strong>respect for nature’s cycles</strong>.
+      </p>
+      <p>
+        In recent years, the growing tourism industry has led to creative fusions of local and international flavors. Young chefs and local entrepreneurs are reimagining classics by:
+      </p>
+      <ul>
+        <li>Introducing <strong>plant-based twists</strong> to traditional dishes to accommodate diverse dietary needs.</li>
+        <li>Serving <strong>farm-to-table</strong> meals with fresh harvests from local growers.</li>
+        <li>Collaborating with indigenous communities to promote <strong>culinary storytelling</strong> through food.</li>
+        <li>Reviving nearly forgotten recipes that were passed down orally through generations.</li>
+      </ul>
+      <p>
+        These efforts not only preserve Siargao’s identity but also highlight its adaptability, making it a unique food destination that respects its roots while embracing innovation.
+      </p>
+    </div>
+  </div>
+
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-auto text-center">
+        <div style="
+          font-family: 'Pacifico', cursive;
+          font-size: 2.5rem;
+          font-weight: 700;
+          letter-spacing: 2px;
+          text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        ">
+          <span style="color: #ffe082;">S</span>
+          <span style="color: #ffcc80;">A</span>
+          <span style="color: #ffb74d;">V</span>
+          <span style="color: #ffca28;">O</span>
+          <span style="color: #ffb300;">O</span>
+          <span style="color: #ff8f00;">R</span>
+          <span style="color: #ffa726;">G</span>
+          <span style="color: #ffcc80;">A</span>
+          <span style="color: #ffe082;">O</span>
+        </div>
+      </div>
+    </div>
+  
+    <nav aria-label="Recipe page navigation" class="d-flex justify-content-center mt-4">
+      <ul class="pagination pagination-lg custom-pagination">
+  
+        <li class="page-item">
+          <a class="page-link" href="recipes.html" aria-label="Previous">
+            ‹ Prev
+          </a>
+        </li>
+  
+        <li class="page-item" id="page1"><a class="page-link" href="recipes.html">1</a></li>
+        <li class="page-item" id="page2"><a class="page-link" href="page2.html">2</a></li>
+        <li class="page-item" id="page3"><a class="page-link" href="page3.html">3</a></li>
+        <li class="page-item" id="page4"><a class="page-link" href="page4.html">4</a></li>
+  
+        <li class="page-item">
+          <a class="page-link" href="page3.html" aria-label="Next">
+            Next ›
+          </a>
+        </li>
+  
+      </ul>
+    </nav>
+  </div>
+
+  <script>
+    
+    const pageItems = document.querySelectorAll('.page-item');
+  
+    pageItems.forEach(item => {
+      item.addEventListener('click', function() {
+        
+        pageItems.forEach(page => page.classList.remove('active'));
+      
+        item.classList.add('active');
+      });
+    });
+    document.getElementById("page2").classList.add("active");
+  </script>
+    
+  
+<footer style="background-color: #f4c095;" class="text-dark text-center py-3 mt-5">
+    <div class="container">
+      <p class="mb-0">© 2025 Flavors of Siargao | Taste the Island with CJ</p>
+    </div>
+  </footer>
+  
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

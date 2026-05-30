@@ -1,0 +1,406 @@
+<!DOCTYPE html>     
+<html>
+<head>
+  <title>Dinner Recipes - Savorgao</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+     body {
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .card{
+      background-color: beige;
+    }
+    .card:hover {
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      transition: 0.3s ease;
+    }
+    .custom-navbar {
+      background-color: #f4c095;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    .navbar .navbar-brand {
+      font-family: 'Pacifico', cursive;
+      font-size: 2rem;
+      color: #3e2723 !important;
+    }
+
+    .navbar .nav-link {
+      color: #5d4037 !important;
+      font-weight: 600;
+    }
+
+      .navbar .nav-link:hover {
+        color: #e65100 !important;
+      }
+    h2 {
+      color: white; 
+      font-size: 2.5rem; 
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+    }
+    .btn-outline-secondary {
+      border-color: white; 
+      color: white; 
+    }
+    .btn-outline-secondary:hover {
+      background-color: white; 
+      color: #8B0000; 
+    }
+    .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .btn-view-recipe {
+    align-self: center; 
+    background-color: #FF6F61; 
+    color: white; 
+    border: 2px solid #FF6F61;
+    border-radius: 50px; 
+    padding: 12px 30px; 
+    font-weight: 600; 
+    transition: background-color 0.3s, transform 0.3s; 
+  }
+  .btn-view-recipe:hover {
+    background-color: #ff3d2f; 
+    transform: scale(1.1); 
+    border-color: #ff3d2f; 
+  }
+
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="savorgaologo.png" alt="Savorgao Logo" style="height: 50px; width: 50px; border-radius: 50%; margin-right: 10px;">
+            Savorgao
+          </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="recipes.html">Recipes</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="container mt-4 text-center">
+  <h2 class="mb-4">Dinner Recipes</h2>
+  <a href="recipes.html" class="btn btn-outline-secondary mb-4">← Back to Recipes</a>
+</div>
+
+
+<div class="container mb-4">
+  <input type="text" id="searchInput" class="form-control" placeholder="Search food...">
+</div>
+
+<div class="container">
+    <div class="row g-4" id="recipeList">
+
+        <div class="col-md-6 col-lg-4 recipe-card">
+            <div class="card h-100">
+                <img src="sinuglaw.jpg"class="card-img-top" alt="Sinuglaw">
+                <div class="card-body">
+                    <h5 class="card-title">Sinuglaw</h5>
+                    <p class="card-text">A combo of kinilaw (raw marinated fish) and grilled pork — smoky, tangy, and refreshing all at once.</p>
+                    <button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#sinuglawModal">
+                        View Recipe
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="sinuglawModal" tabindex="-1" aria-labelledby="sinuglawModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="sinuglawModalLabel">Sinuglaw Recipe</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="sinuglaw.jpg" class="img-fluid mb-3 mx-auto d-block" alt="Sinuglaw">
+                        <h3>Ingredients:</h3>
+                        <ul>
+                            <li>1/2 lb fresh tuna, cubed</li>
+                            <li>1/2 lb grilled pork belly, diced</li>
+                            <li>1/2 cup vinegar</li>
+                            <li>1 thumb-sized ginger, minced</li>
+                            <li>1 red onion, sliced</li>
+                            <li>2–3 chili peppers, chopped</li>
+                            <li>1/2 cup cucumber, diced</li>
+                            <li>Salt and pepper to taste</li>
+                        </ul>
+                        <h3>Instructions:</h3>
+                        <ol>
+                            <li>Marinate tuna in vinegar, ginger, onions, and chili for 10–15 minutes.</li>
+                            <li>Add grilled pork and cucumber. Mix gently.</li>
+                            <li>Season with salt and pepper. Chill before serving.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 recipe-card">
+            <div class="card h-100">
+                <img src="pangatsagata.jpg" class="card-img-top" alt="Pangat na Isda sa Gata">
+                <div class="card-body">
+                    <h5 class="card-title">Pangat na Isda sa Gata</h5>
+                    <p class="card-text">Fish simmered in coconut milk with leafy greens and chili. Creamy and comforting — a Siargao coastal classic.</p>
+                    <button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#pangatModal">
+                        View Recipe
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="pangatModal" tabindex="-1" aria-labelledby="pangatModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="pangatModalLabel">Pangat na Isda sa Gata Recipe</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="pangatsagata.jpg" class="img-fluid mb-3 mx-auto d-block" alt="Pangat na Isda sa Gata">
+                        <h3>Ingredients:</h3>
+                        <ul>
+                            <li>1 lb fish (tilapia, bangus, or mackerel)</li>
+                            <li>2 cups coconut milk</li>
+                            <li>2 cloves garlic, minced</li>
+                            <li>1 onion, sliced</li>
+                            <li>2–3 green chilies (siling haba)</li>
+                            <li>1 bunch spinach or malunggay leaves</li>
+                            <li>Salt and pepper to taste</li>
+                        </ul>
+                        <h3>Instructions:</h3>
+                        <ol>
+                            <li>In a pan, sauté garlic and onion in a bit of oil.</li>
+                            <li>Pour in coconut milk and bring to a simmer.</li>
+                            <li>Add fish and chili. Simmer for 10–15 minutes.</li>
+                            <li>Add leafy greens and cook until wilted.</li>
+                            <li>Season to taste and serve with rice.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 recipe-card">
+            <div class="card h-100">
+                <img src="inihawleimpo.jpg" class="card-img-top" alt="Inihaw na Liempo">
+                <div class="card-body">
+                    <h5 class="card-title">Inihaw na Liempo</h5>
+                    <p class="card-text">Marinated pork belly grilled to perfection, often served with garlic rice and spicy vinegar dip.</p>
+                    <button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#liempoModal">
+                        View Recipe
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="liempoModal" tabindex="-1" aria-labelledby="liempoModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="liempoModalLabel">Inihaw na Liempo Recipe</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="inihawleimpo.jpg" class="img-fluid mb-3 mx-auto d-block" alt="Inihaw na Liempo">
+                        <h3>Ingredients:</h3>
+                        <ul>
+                            <li>1 lb pork belly, sliced</li>
+                            <li>1/4 cup soy sauce</li>
+                            <li>1/4 cup calamansi juice or lemon juice</li>
+                            <li>4 cloves garlic, crushed</li>
+                            <li>1 tsp ground black pepper</li>
+                            <li>1 tbsp brown sugar</li>
+                        </ul>
+                        <h3>Instructions:</h3>
+                        <ol>
+                            <li>Marinate pork in soy sauce, calamansi, garlic, sugar, and pepper for at least 2 hours.</li>
+                            <li>Grill over medium heat until nicely charred and cooked through.</li>
+                            <li>Slice and serve with vinegar dip and garlic rice.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4 recipe-card">
+            <div class="card h-100">
+                <img src="tinolamanok.jpg" class="card-img-top" alt="Tinolang Manok">
+                <div class="card-body">
+                    <h5 class="card-title">Tinolang Manok</h5>
+                    <p class="card-text">Native chicken cooked in ginger broth with papaya and chili leaves. Light but nourishing — great for cooler Siargao evenings.</p>
+                    <button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#tinolaModal">
+                        View Recipe
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="tinolaModal" tabindex="-1" aria-labelledby="tinolaModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="tinolaModalLabel">Tinolang Manok Recipe</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="tinolamanok.jpg" class="img-fluid mb-3 mx-auto d-block" alt="Tinolang Manok">
+                        <h3>Ingredients:</h3>
+                        <ul>
+                            <li>1 whole native chicken, cut into pieces</li>
+                            <li>1 thumb-sized ginger, sliced</li>
+                            <li>1 onion, chopped</li>
+                            <li>4 cloves garlic, minced</li>
+                            <li>1 green papaya, sliced</li>
+                            <li>1 bunch chili leaves (or malunggay)</li>
+                            <li>Fish sauce, salt, and pepper to taste</li>
+                            <li>6 cups water</li>
+                        </ul>
+                        <h3>Instructions:</h3>
+                        <ol>
+                            <li>In a pot, sauté garlic, onion, and ginger until aromatic.</li>
+                            <li>Add chicken and cook until lightly browned.</li>
+                            <li>Pour in water and bring to a boil, then lower heat to simmer until chicken is tender.</li>
+                            <li>Add papaya and cook until soft.</li>
+                            <li>Season with fish sauce, salt, and pepper, then add chili leaves. Simmer for 2–3 minutes before serving.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 recipe-card">
+            <div class="card h-100">
+                <img src="shrimpcurry.jpg" class="card-img-top" alt="Coconut Curry Prawns">
+                <div class="card-body">
+                    <h5 class="card-title">Coconut Curry Prawns</h5>
+                    <p class="card-text">Juicy prawns simmered in a rich coconut curry sauce with local spices — aromatic and deeply flavorful.</p>
+                    <button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#coconutCurryModal">
+                        View Recipe
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="coconutCurryModal" tabindex="-1" aria-labelledby="coconutCurryModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="coconutCurryModalLabel">Coconut Curry Prawns Recipe</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="shrimpcurry.jpg" class="img-fluid mb-3 mx-auto d-block" alt="Coconut Curry Prawns">
+                        <h3>Ingredients:</h3>
+                        <ul>
+                            <li>500g prawns, cleaned and deveined</li>
+                            <li>2 cups coconut milk</li>
+                            <li>1 tbsp curry powder</li>
+                            <li>1 onion, chopped</li>
+                            <li>2 cloves garlic, minced</li>
+                            <li>1 thumb-sized ginger, minced</li>
+                            <li>1 red bell pepper, sliced</li>
+                            <li>Salt and chili flakes to taste</li>
+                        </ul>
+                        <h3>Instructions:</h3>
+                        <ol>
+                            <li>Sauté garlic, onion, and ginger in oil until fragrant.</li>
+                            <li>Add curry powder and cook for 1 minute.</li>
+                            <li>Pour in coconut milk and bring to a gentle boil.</li>
+                            <li>Add prawns and bell peppers. Simmer until prawns are pink and cooked.</li>
+                            <li>Season with salt and chili flakes. Serve hot with rice.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 recipe-card">
+            <div class="card h-100">
+                <img src="bangusisig.jpg" class="card-img-top" alt="Bangus Sisig">
+                <div class="card-body">
+                    <h5 class="card-title">Bangus Sisig</h5>
+                    <p class="card-text">A healthier take on traditional sisig using milkfish — crispy, tangy, and spicy, served on a sizzling plate with egg.</p>
+                    <button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#bangusSisigModal">
+                        View Recipe
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="bangusSisigModal" tabindex="-1" aria-labelledby="bangusSisigModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="bangusSisigModalLabel">Bangus Sisig Recipe</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="bangusisig.jpg" class="img-fluid mb-3 mx-auto d-block" alt="Bangus Sisig">
+                        <h3>Ingredients:</h3>
+                        <ul>
+                            <li>1 large bangus (milkfish), deboned and flaked</li>
+                            <li>1 onion, finely chopped</li>
+                            <li>2 cloves garlic, minced</li>
+                            <li>1 chili, chopped (optional)</li>
+                            <li>2 tbsp mayonnaise</li>
+                            <li>1 tbsp calamansi juice</li>
+                            <li>1 egg (optional, for sizzling plate)</li>
+                            <li>Salt and pepper to taste</li>
+                        </ul>
+                        <h3>Instructions:</h3>
+                        <ol>
+                            <li>Fry bangus flakes until slightly crispy. Set aside.</li>
+                            <li>Sauté onion, garlic, and chili until soft.</li>
+                            <li>Mix in bangus flakes, mayonnaise, and calamansi juice.</li>
+                            <li>Season with salt and pepper. Serve hot with optional egg on a sizzling plate.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div></div>
+
+        <footer style="background-color: #f4c095;" class="text-dark text-center py-3 mt-5">
+            <div class="container">
+              <p class="mb-0">© 2025 Flavors of Siargao | Taste the Island with CJ</p>
+            </div>
+          </footer>
+                                                
+            
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+  document.getElementById('searchInput').addEventListener('keyup', function() {
+    let query = this.value.toLowerCase();
+    let cards = document.querySelectorAll('.recipe-card');
+
+    cards.forEach(function(card) {
+      let text = card.innerText.toLowerCase();
+      if (text.includes(query)) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>  
